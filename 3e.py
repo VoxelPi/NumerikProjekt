@@ -19,9 +19,12 @@ def approximate(n):
     return sum
 
 n = np.arange(1, 11, 1)
-area = np.vectorize(approximate)(n)
+approx = np.vectorize(approximate)(n)
 
 plt.figure()
-plt.plot(n, area)
+plt.plot(n, approx)
+plt.xlabel("n")
+plt.ylabel("approximation")
+plt.title("$f(x,y) = \sqrt{x + y}$")
 plt.grid()
 plt.show()
