@@ -25,7 +25,7 @@ f_expected = 1
 f = lambda x : np.exp(x[0] + x[1])
 plot_error(n, f, f_expected, "$\exp(x + y)$")
 
-g_expected = 6/15
+g_expected = 2/5
 g = lambda x : np.sqrt(x[0] + x[1])
 plot_error(n, g, g_expected, "$\sqrt{x + y}$")
 
