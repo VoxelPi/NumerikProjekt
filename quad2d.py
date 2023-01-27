@@ -1,13 +1,8 @@
 import numpy as np
 from scipy.special import p_roots
 
-def A(z):
-    return np.transpose(np.array([z[0,:] - z[2,:],z[1,:] - z[2,:]]))
-
 def quadTriangle(n, z):
     (x_1d, w_1d) = p_roots(n, False)
-    # print(x_1d)
-    # print(w_1d)
 
     x_2d = np.zeros((n*n, 2))
     w_2d = np.zeros((n*n))
@@ -23,6 +18,9 @@ def quadTriangle(n, z):
 
 def phi(s, t):
     return np.array([s, (1-s)*t])
+
+def A(z):
+    return np.transpose(np.array([z[0,:] - z[2,:],z[1,:] - z[2,:]]))
 
 def psi(z, v):
     return A(z) @ v + z[2,:] 
